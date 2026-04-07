@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] bg-gradient-to-br from-slate-50 to-blue-50 px-6 py-12 font-sans md:py-16">
+    <section className="relative min-h-[80vh] bg-gradient-to-br from-slate-50 to-blue-50 px-6 pt-28 pb-12 font-sans md:pt-32 md:pb-16">
       <div className="mx-auto grid h-full w-full max-w-7xl gap-10 md:grid-cols-2">
         <div className="flex flex-col justify-start self-start text-left">
-          <h1 className="max-w-2xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
+          <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl md:text6-xl">
             Focus on Your Patients.
             <br className="hidden sm:block" />
             We&apos;ll Handle the Billing.

@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import Services from "@/components/Services";
 import Software from "@/components/Software";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (

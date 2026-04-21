@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GOOGLE_FORM_URL } from "@/config/links";
 
 export default function Hero() {
   return (
@@ -22,7 +23,9 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
               <a
-                href="#contact"
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Get a Free Revenue Audit
@@ -49,17 +52,18 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 top-24 -right-16 hidden w-[60%] md:block lg:top-20 lg:-right-24 lg:w-[65%] xl:-right-25 xl:w-[70%]">
-  <div className="relative h-full w-full">
-    <Image
-      src="/Hero2.png"
-      alt="Medical professional consulting with a patient"
-      fill
-      className="object-cover object-bottom object-right"
-      priority
-    />
-  </div>
-</div>
+      {/* Desktop Image Container */}
+      <div className="absolute bottom-0 top-24 -right-16 hidden w-[60%] md:block lg:top-17 lg:-right-24 lg:w-[65%] xl:-right-8 xl:w-[70%] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%),linear-gradient(to_left,black_80%,transparent_100%)] [mask-composite:intersect]">
+        <div className="relative h-full w-full">
+          <Image
+            src="/Hero2.png"
+            alt="Medical professional consulting with a patient"
+            fill
+            className="object-contain object-bottom object-right" // Changed to object-contain to prevent cropping the top of her head
+            priority
+          />
+        </div>
+      </div>
 
     </section>
   );

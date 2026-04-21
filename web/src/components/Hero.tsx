@@ -3,10 +3,9 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-slate-50 to-blue-50 px-6 pt-28 pb-12 font-sans md:pt-32 md:pb-16">
-      {/* md:grid-cols-2 creates two columns side-by-side on desktop */}
       <div className="mx-auto grid h-full w-full max-w-7xl gap-10 md:grid-cols-2 md:items-center md:gap-12 lg:gap-14">
         
-        {/* COLUMN 1 (LEFT SIDE): The Text and Buttons */}
+        {/* Text Section - Left Side */}
         <div className="flex flex-col justify-start self-center text-left">
           <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             Focus on Your Patients.
@@ -36,15 +35,16 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* COLUMN 2 (RIGHT SIDE): The Image */}
+        {/* Image Section - Right Side */}
         <div className="relative flex justify-center md:justify-end">
-          <div className="relative h-[400px] w-full max-w-md overflow-hidden rounded-2xl shadow-xl sm:h-[500px]">
+          <div className="relative w-full max-w-lg aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:max-w-xl">
             <Image
-              src="/Hero.png"
-              alt="Professional Headshot"
+              src="/happy-african-american-female-doctor-working-medical-clinic.jpg"
+              alt="Doctor reviewing information with a patient in a clinic"
               fill
-              className="object-cover object-top"
+              className="object-cover object-center"
               priority
+              sizes="(min-width: 1280px) 36rem, (min-width: 768px) 50vw, 100vw"
             />
           </div>
         </div>

@@ -3,8 +3,11 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-slate-50 to-blue-50 px-6 pt-28 pb-12 font-sans md:pt-32 md:pb-16">
+      {/* md:grid-cols-2 creates two columns side-by-side on desktop */}
       <div className="mx-auto grid h-full w-full max-w-7xl gap-10 md:grid-cols-2 md:items-center md:gap-12 lg:gap-14">
-        <div className="flex flex-col justify-start self-start text-left">
+        
+        {/* COLUMN 1 (LEFT SIDE): The Text and Buttons */}
+        <div className="flex flex-col justify-start self-center text-left">
           <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             Focus on Your Patients.
             <br className="hidden sm:block" />
@@ -33,18 +36,19 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative w-full md:justify-self-end">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-slate-200/80 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/70 sm:max-w-lg md:mx-0 md:max-w-none lg:aspect-[5/6]">
+        {/* COLUMN 2 (RIGHT SIDE): The Image */}
+        <div className="relative flex justify-center md:justify-end">
+          <div className="relative h-[400px] w-full max-w-md overflow-hidden rounded-2xl shadow-xl sm:h-[500px]">
             <Image
-              src="/happy-african-american-female-doctor-working-medical-clinic.jpg"
-              alt="Medical professional at work in a clinic, representing focused patient care"
+              src="/Hero.png"
+              alt="Professional Headshot"
               fill
+              className="object-cover object-top"
               priority
-              sizes="(max-width: 768px) min(100vw, 28rem), 50vw"
-              className="object-cover object-center"
             />
           </div>
         </div>
+
       </div>
     </section>
   );

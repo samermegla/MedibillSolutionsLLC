@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <header className="absolute top-0 left-0 z-50 w-full bg-transparent">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-slate-200/70 bg-white/80 backdrop-blur-md">
       <nav className="mx-auto flex w-full max-w-7xl items-center gap-8 px-6 py-4">
         <div className="h-10 w-36 shrink-0 rounded-md border border-dashed border-slate-300" />
 

@@ -11,6 +11,19 @@ export default function NavBar() {
             <a href="#about-us" className="transition-colors hover:text-slate-700">
               About Us
             </a>
+
+            //Logo
+            <Image
+              src="/a_clean_professional_corporate_logo_design_on_a_w-Picsart-BackgroundRemover.png"
+              alt="Medibill Solutions"
+              width={512}
+              height={512}
+              className="h-20 w-20 object-contain sm:h-24 sm:w-24"
+              sizes="(max-width: 768px) 80px, 96px"
+              priority
+          />
+            
+        </a>
           </li>
           <li>
             <a href="#services" className="transition-colors hover:text-slate-700">
